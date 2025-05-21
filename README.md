@@ -142,4 +142,5 @@ Posjeti: [http://localhost:5555](http://localhost:5555)
 pip install fastapi celery redis psycopg2
 ```
 
-Created with dedication by Nebra98 and HrvojeR
+Created with dedication by [@Nebra98](https://github.com/Nebra98) and [@HrvojeR](https://github.com/HrvojeR)
+
