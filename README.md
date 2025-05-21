@@ -1,4 +1,5 @@
-🌟 FastAPI-Celery-Redis Project
+ENG
+ FastAPI-Celery-Redis Project
     
 📖 Overview
 This project showcases a lightweight application demonstrating the seamless integration of FastAPI, Celery, Redis, Flower, and PostgreSQL. The core functionality revolves around generating random items with random quantities and automatically saving them to a PostgreSQL database on a scheduled date using Celery tasks. Redis serves as the message broker and result backend, while Flower provides a sleek interface for task visualization.
@@ -50,8 +51,8 @@ The Celery worker and Celery Beat must run concurrently in separate terminals.
 Verify that PostgreSQL is properly configured with the correct database connection settings in your FastAPI application.
 Install required Python dependencies (fastapi, celery, redis, psycopg2) before running the project.
 
-
-🌟 FastAPI-Celery-Redis Projekt
+HRV
+ FastAPI-Celery-Redis Projekt
     
 📖 Pregled
 Ovaj projekt demonstrira laganu aplikaciju koja prikazuje besprijekornu integraciju FastAPI-ja, Celery-ja, Redisa, Flower-a i PostgreSQL-a. Osnovna funkcionalnost uključuje generiranje nasumičnih stavki s nasumičnim količinama i njihovo automatsko spremanje u PostgreSQL bazu podataka na zakazani datum putem Celery zadataka. Redis služi kao posrednik poruka i pozadina za rezultate, dok Flower pruža elegantno sučelje za vizualizaciju zadataka.
@@ -68,7 +69,7 @@ PostgreSQL 🗄️: Robusna relacijska baza podataka otvorenog koda za pohranu p
 🔍 Osnovna funkcionalnost
 Aplikacija:
 
-Generira nasumične stavke s nasumičnim količinama.
+Generira nasumične stavke s nasumičnim brojevima u nazivu.
 Zakazuje spremanje tih stavki u PostgreSQL bazu podataka na određeni datum.
 Koristi Celery radnike s Redisom kao posrednikom poruka za obradu zadataka.
 Upotrebljava Celery Beat za zakazivanje zadataka.
