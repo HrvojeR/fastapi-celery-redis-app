@@ -21,7 +21,7 @@ The core feature is generating random items and scheduling them to be saved into
 ## 🔍 Core Features
 
 ✅ Generate random items (e.g. `Item123`)  
-✅ Schedule saving to PostgreSQL on a specific date  
+✅ Schedule saving to PostgreSQL on a scheduled interval
 ✅ Celery workers handle tasks asynchronously via Redis  
 ✅ Use **Celery Beat** for recurring or scheduled tasks  
 ✅ Visual task tracking with **Flower**
