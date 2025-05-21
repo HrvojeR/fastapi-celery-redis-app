@@ -1,28 +1,24 @@
-# 🌟 FastAPI-Celery-Redis Project
+# 🌟 FastAPI-Celery-Redis Project (ENG)
 
-<sub>ENG / HRV</sub>
+## 📖 Overview
 
-## 📖 Overview / Pregled
+This lightweight application showcases seamless integration of **FastAPI**, **Celery**, **Redis**, **Flower**, and **PostgreSQL**.
 
-This lightweight application showcases seamless integration of **FastAPI**, **Celery**, **Redis**, **Flower**, and **PostgreSQL**.  
-Ova lagana aplikacija prikazuje besprijekornu integraciju **FastAPI-ja**, **Celery-ja**, **Redisa**, **Flower-a** i **PostgreSQL-a**.
-
-The core feature is generating random items and scheduling them to be saved into a PostgreSQL database.  
-Osnovna funkcionalnost je generiranje nasumičnih stavki i njihovo zakazano spremanje u bazu podataka.
+The core feature is generating random items and scheduling them to be saved into a PostgreSQL database.
 
 ---
 
-## 🛠️ Technologies Used / Korištene tehnologije
+## 🛠️ Technologies Used
 
-- **FastAPI** 🚀 – Modern web framework for APIs / Moderan web framework za API-je  
-- **Celery** ⏳ – Distributed task queue / Distribuirani red zadataka  
-- **Redis** ⚡ – Message broker & result backend / Posrednik poruka i pozadina za rezultate  
-- **Flower** 🌸 – Task monitoring dashboard / Nadzorna ploča za zadatke  
-- **PostgreSQL** 🗄️ – Relational database / Relacijska baza podataka  
+- **FastAPI** 🚀 – Modern web framework for APIs  
+- **Celery** ⏳ – Distributed task queue  
+- **Redis** ⚡ – Message broker & result backend  
+- **Flower** 🌸 – Task monitoring dashboard  
+- **PostgreSQL** 🗄️ – Relational database  
 
 ---
 
-## 🔍 Core Features / Osnovna funkcionalnost
+## 🔍 Core Features
 
 ✅ Generate random items (e.g. `Item123`)  
 ✅ Schedule saving to PostgreSQL on a specific date  
@@ -32,46 +28,42 @@ Osnovna funkcionalnost je generiranje nasumičnih stavki i njihovo zakazano spre
 
 ---
 
-## 🚀 Setup & Run / Postavljanje i pokretanje
+## 🚀 Setup & Run
 
-### 1. Start Redis via Docker / Pokreni Redis putem Dockera
+### 1. Start Redis via Docker
 
 ```bash
 docker run -d -p 6379:6379 --name redis redis
 ```
 
-### 2. Run Celery Worker / Pokreni Celery radnika
+### 2. Run Celery Worker
 
 ```bash
 celery -A celery_worker worker --pool=solo --loglevel=info
 ```
 
-### 3. Run Celery Beat / Pokreni Celery Beat
+### 3. Run Celery Beat
 
 ```bash
 celery -A celery_worker beat --loglevel=info
 ```
 
-### 4. Run Flower Dashboard / Pokreni Flower nadzornu ploču
+### 4. Run Flower Dashboard
 
 ```bash
 celery -A celery_worker flower
 ```
 
-Visit / Posjeti: [http://localhost:5555](http://localhost:5555)
+Visit: [http://localhost:5555](http://localhost:5555)
 
 ---
 
-## 📝 Notes / Napomene
+## 📝 Notes
 
 - Ensure **Docker** is installed and running  
-  Provjeri da je Docker instaliran i pokrenut  
 - Celery worker and beat must run **in separate terminals**  
-  Celery radnik i Beat moraju raditi u **zasebnim terminalima**  
 - Configure your **PostgreSQL URI** in the FastAPI app  
-  Ispravno konfiguriraj **PostgreSQL vezu** u aplikaciji  
-- Install required dependencies:  
-  Instaliraj potrebne biblioteke:
+- Install required dependencies:
 
 ```bash
 pip install fastapi celery redis psycopg2
@@ -79,5 +71,73 @@ pip install fastapi celery redis psycopg2
 
 ---
 
-✅ Ready to scale async jobs with FastAPI + Celery + Redis + PostgreSQL!  
-✅ Spreman za skaliranje asinkronih zadataka uz FastAPI + Celery + Redis + PostgreSQL!
+# 🌟 FastAPI-Celery-Redis Projekt(HRV)
+
+## 📖 Pregled
+
+Ova lagana aplikacija prikazuje besprijekornu integraciju **FastAPI-ja**, **Celery-ja**, **Redisa**, **Flower-a** i **PostgreSQL-a**.
+
+Osnovna funkcionalnost je generiranje nasumičnih stavki i njihovo zakazano spremanje u PostgreSQL bazu podataka.
+
+---
+
+## 🛠️ Korištene Tehnologije
+
+- **FastAPI** 🚀 – Moderan web framework za API-je  
+- **Celery** ⏳ – Distribuirani red zadataka  
+- **Redis** ⚡ – Posrednik poruka i pozadina za rezultate  
+- **Flower** 🌸 – Nadzorna ploča za zadatke  
+- **PostgreSQL** 🗄️ – Relacijska baza podataka  
+
+---
+
+## 🔍 Osnovna Funkcionalnost
+
+✅ Generira nasumične stavke (npr. `Item123`)  
+✅ Zakazuje spremanje u PostgreSQL na određeni datum  
+✅ Celery radnici asinkrono obrađuju zadatke putem Redisa  
+✅ Koristi **Celery Beat** za zakazane ili ponavljajuće zadatke  
+✅ Omogućuje vizualno praćenje zadataka pomoću **Flower-a**
+
+---
+
+## 🚀 Postavljanje i Pokretanje
+
+### 1. Pokreni Redis putem Dockera
+
+```bash
+docker run -d -p 6379:6379 --name redis redis
+```
+
+### 2. Pokreni Celery Radnika
+
+```bash
+celery -A celery_worker worker --pool=solo --loglevel=info
+```
+
+### 3. Pokreni Celery Beat
+
+```bash
+celery -A celery_worker beat --loglevel=info
+```
+
+### 4. Pokreni Flower nadzornu ploču
+
+```bash
+celery -A celery_worker flower
+```
+
+Posjeti: [http://localhost:5555](http://localhost:5555)
+
+---
+
+## 📝 Napomene
+
+- Provjeri da je **Docker** instaliran i pokrenut  
+- Celery radnik i Beat moraju raditi **u zasebnim terminalima**  
+- Ispravno konfiguriraj **PostgreSQL vezu** u FastAPI aplikaciji  
+- Instaliraj potrebne biblioteke:
+
+```bash
+pip install fastapi celery redis psycopg2
+```
